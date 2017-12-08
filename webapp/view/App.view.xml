@@ -3,7 +3,13 @@
 	<App>
 		<pages>
 			<Page title="{i18n>title}">
-				<content></content>
+				<content>
+					<Button
+						id="idButton"
+						icon="sap-icon://database"
+						press="onButtonPress">
+					</Button>
+				</content>
 			</Page>
 		</pages>
 	</App>

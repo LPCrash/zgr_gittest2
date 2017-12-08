@@ -4,6 +4,8 @@ sap.ui.define([
 	"use strict";
 
 	return Controller.extend("zgr.gitzgr_gittest2.controller.App", {
-
+		onButtonPress: function(oEvent) {
+			sap.m.MessageToast.show("Hello World!");
+		}
 	});
 });
