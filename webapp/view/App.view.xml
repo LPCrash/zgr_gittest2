@@ -1,15 +1,49 @@
-<mvc:View controllerName="zgr.gitzgr_gittest2.controller.App" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:mvc="sap.ui.core.mvc"
+<mvc:View controllerName="zgr.gitzgr_gittest2.controller.App"
+	xmlns:html="http://www.w3.org/1999/xhtml"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns:layout="sap.ui.layout"
 	displayBlock="true" xmlns="sap.m">
 	<App>
 		<pages>
 			<Page title="{i18n>title}">
+				<headerContent>
+					<Toolbar>
+						<ToolbarSpacer/>
+						<Button
+							id="idButtonReload"
+							icon="sap-icon://refresh"
+							tooltip="Refresh page"
+							press="onButtonReloadPress">
+						</Button>
+					</Toolbar>
+				</headerContent>
+				
 				<content>
-					<Button
-						id="idButton"
-						icon="sap-icon://database"
-						press="onButtonPress">
-					</Button>
+					<layout:VerticalLayout
+						class="sapUiContentPadding"
+						width="100%">
+						<Label
+							text="Name"
+							labelFor="inputText"/>
+						<Input
+							id="idInput"
+							class="sapUiSmallMarginBottom"
+							type="Text"
+							placeholder="Enter name ..."/>
+					</layout:VerticalLayout>
 				</content>
+				
+				<footer>
+					<Toolbar>
+						<ToolbarSpacer/>
+						<Button
+							id="idButtonEnter"
+							icon="sap-icon://accept"
+							tooltip="Input data"
+							type="Accept"
+							press="onButtonEnterPress" />
+					</Toolbar>
+				</footer>
 			</Page>
 		</pages>
 	</App>
